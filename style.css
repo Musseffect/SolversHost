@@ -1,0 +1,716 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css);.presetButtonContainer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column; }
+
+#PresetList {
+  overflow-y: auto;
+  white-space: nowrap;
+  margin: 5px -5px 0px -5px;
+  display: flex;
+  flex-direction: row; }
+
+.presetName {
+  word-break: break-all;
+  min-height: 1.6rem; }
+
+.presetMethod {
+  position: relative;
+  display: flex;
+  word-break: break-all; }
+
+.presetMethodPreviewParameters {
+  display: flex;
+  flex-direction: column; }
+
+.presetMethodName {
+  /*width:100px;*/
+  display: inline-block; }
+
+#presetsBlock {
+  background-color: #00C13A;
+  display: flex;
+  flex-direction: row; }
+
+.presetBlock {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 10px; }
+  @media only screen and (max-width: 640px) {
+    .presetBlock {
+      min-width: 250px; } }
+  @media only screen and (min-width: 641px) and (max-width: 1007px) {
+    .presetBlock {
+      width: 250px; } }
+  @media only screen and (min-width: 1008px) {
+    .presetBlock {
+      width: 250px; } }
+
+.presetButton {
+  margin-top: 3px;
+  margin-bottom: 3px; }
+
+.sessionCreationBlock {
+  padding: 5px;
+  display: flex;
+  flex-direction: column; }
+
+.sessionListControls {
+  display: flex; }
+  @media only screen and (max-width: 640px) {
+    .sessionListControls {
+      flex-direction: column;
+      border-bottom: 2px solid black;
+      /*align-items:center;*/ } }
+  @media only screen and (min-width: 641px) and (max-width: 1007px) {
+    .sessionListControls {
+      flex-direction: column;
+      border-right: 2px solid black; } }
+  @media only screen and (min-width: 1008px) {
+    .sessionListControls {
+      flex-direction: column;
+      border-right: 2px solid black; } }
+
+#sessionBlock {
+  /*border:2px solid black;*/ }
+
+#sessionBlockLabel {
+  border-bottom: 2px solid black;
+  /*border-left:2px solid black;*/
+  /*border-right:2px solid black;*/
+  padding: 5px; }
+
+#sessionListBlock {
+  background-color: white;
+  display: flex;
+  /*border:2px solid black;*/ }
+  @media only screen and (max-width: 640px) {
+    #sessionListBlock {
+      flex-direction: column; } }
+  @media only screen and (min-width: 641px) and (max-width: 1007px) {
+    #sessionListBlock {
+      flex-direction: row; } }
+  @media only screen and (min-width: 1008px) {
+    #sessionListBlock {
+      flex-direction: row; } }
+
+#sessionList {
+  display: flex;
+  overflow: auto; }
+  @media only screen and (max-width: 640px) {
+    #sessionList {
+      flex-direction: column;
+      min-height: 300px; } }
+  @media only screen and (min-width: 641px) and (max-width: 1007px) {
+    #sessionList {
+      flex-direction: row;
+      flex-wrap: wrap; } }
+  @media only screen and (min-width: 1008px) {
+    #sessionList {
+      flex-direction: row;
+      flex-wrap: wrap; } }
+
+.loader {
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+#modalDialog.show {
+  display: block; }
+
+#fileField {
+  display: none; }
+
+.loaderBackground {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  background-colro: black;
+  justifyContent: 'center';
+  alignItems: 'center';
+  flex-direction: 'column'; }
+
+.loaderBackground.show {
+  display: flex; }
+
+.loaderBackground.hide {
+  display: none; }
+
+#methodsBlock {
+  /*border: 2px solid black;*/
+  background-color: white; }
+
+.methodColor0 {
+  background-color: #E600CE !important; }
+
+.methodColor1 {
+  background-color: #0014AF !important; }
+
+.methodColor2 {
+  background-color: #00C13A !important; }
+
+.methodColor3 {
+  background-color: #F6D444 !important; }
+
+#methodAddButton {
+  height: 52px;
+  border-radius: 0px; }
+  @media only screen and (max-width: 640px) {
+    #methodAddButton {
+      width: 100%; } }
+  @media only screen and (min-width: 641px) and (max-width: 1007px) {
+    #methodAddButton {
+      width: 254px; } }
+  @media only screen and (min-width: 1008px) {
+    #methodAddButton {
+      width: 254px; } }
+
+.methodSelect, .methodInput {
+  width: 100%; }
+  @media only screen and (max-width: 640px) {
+    .methodSelect, .methodInput {
+      display: table-cell; } }
+  @media only screen and (min-width: 641px) and (max-width: 1007px) {
+    .methodSelect, .methodInput {
+      display: block; } }
+  @media only screen and (min-width: 1008px) {
+    .methodSelect, .methodInput {
+      display: table-cell; } }
+  @media only screen and (max-width: 400px) {
+    .methodSelect, .methodInput {
+      display: block; } }
+
+.methodLabel {
+  white-space: nowrap;
+  margin-bottom: 0px;
+  /*margin-top:.5rem;*/ }
+  @media only screen and (max-width: 640px) {
+    .methodLabel {
+      display: table-cell; } }
+  @media only screen and (min-width: 641px) and (max-width: 1007px) {
+    .methodLabel {
+      display: block; } }
+  @media only screen and (min-width: 1008px) {
+    .methodLabel {
+      display: table-cell; } }
+  @media only screen and (max-width: 400px) {
+    .methodLabel {
+      display: block; } }
+
+@media only screen and (max-width: 640px) {
+  .methodGroup {
+    display: table-row-group; } }
+
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
+  .methodGroup {
+    display: block; } }
+
+@media only screen and (min-width: 1008px) {
+  .methodGroup {
+    display: table-row-group; } }
+
+@media only screen and (max-width: 400px) {
+  .methodGroup {
+    display: block; } }
+
+@media only screen and (max-width: 640px) {
+  .methodRow {
+    display: table-row; } }
+
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
+  .methodRow {
+    display: block; } }
+
+@media only screen and (min-width: 1008px) {
+  .methodRow {
+    display: table-row; } }
+
+@media only screen and (max-width: 400px) {
+  .methodRow {
+    display: block; } }
+
+#methodParameters.hide {
+  visibility: hidden; }
+
+#methodParameters.show {
+  visibility: visible; }
+
+@media only screen and (max-width: 640px) {
+  .methodParametersHidden {
+    display: none; } }
+
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
+  .methodParametersHidden {
+    visibility: hidden; } }
+
+@media only screen and (min-width: 1008px) {
+  .methodParametersHidden {
+    visibility: hidden; } }
+
+@media only screen and (max-width: 400px) {
+  .methodParametersHidden {
+    display: none; } }
+
+.methodNumber {
+  display: inline-block;
+  width: 20px;
+  flex-shrink: 0; }
+
+.methodName {
+  display: inline;
+  /*width:80px;*/
+  overflow-wrap: break-word;
+  word-wrap: break-word; }
+
+.methodColor {
+  display: inline-block;
+  background-color: black;
+  flex-shrink: 0; }
+
+.methodRemoveButton, .methodColor {
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  width: 21px;
+  height: 21px; }
+
+.methodRemoveButton {
+  display: flex;
+  flex-shrink: 0; }
+
+@media only screen and (max-width: 640px) {
+  #methodAddingTable {
+    display: table;
+    border-spacing: 5px; } }
+
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
+  #methodAddingTable {
+    display: flex;
+    padding: 5px;
+    flex-direction: column; } }
+
+@media only screen and (min-width: 1008px) {
+  #methodAddingTable {
+    display: table;
+    border-spacing: 5px; } }
+
+@media only screen and (max-width: 400px) {
+  #methodAddingTable {
+    display: flex;
+    padding: 5px;
+    flex-direction: column; } }
+
+.methodRemoveIcon {
+  margin: auto;
+  width: 60%;
+  height: 60%;
+  fill: black; }
+
+.methodRemoveButton:hover .methodRemoveIcon {
+  fill: red; }
+
+#methodsListBlock {
+  /*! background-color:#AE0A0A; */
+  width: auto;
+  /*min-height:265px;*/
+  display: flex; }
+
+#methodsList {
+  background-color: white; }
+  @media only screen and (max-width: 640px) {
+    #methodsList {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-bottom: 2px solid black; } }
+  @media only screen and (min-width: 641px) and (max-width: 1007px) {
+    #methodsList {
+      /*border-right:2px solid black;*/ } }
+  @media only screen and (min-width: 1008px) {
+    #methodsList {
+      /*border-right:2px solid black;*/ } }
+
+#methodParameters {
+  width: auto;
+  background-color: white; }
+  @media only screen and (max-width: 640px) {
+    #methodParameters {
+      border-bottom: 2px solid black; } }
+
+.methodListItem {
+  cursor: pointer;
+  display: flex;
+  min-height: 52px;
+  padding: 2px;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none; }
+  @media only screen and (max-width: 640px) {
+    .methodListItem {
+      width: 100%; } }
+
+.methodListItem:hover {
+  background-color: #ccc;
+  box-shadow: inset 0px 0px 2px 2px #092905; }
+
+.methodListItemSelected, .methodListItemSelected:hover {
+  background-color: #007bff;
+  color: white;
+  box-shadow: inset 0px 0px 2px 2px #092905; }
+
+.methodInfoContainer {
+  display: flex; }
+  @media only screen and (max-width: 640px) {
+    .methodInfoContainer {
+      flex-grow: 1; } }
+  @media only screen and (min-width: 641px) and (max-width: 1007px) {
+    .methodInfoContainer {
+      width: 200px; } }
+  @media only screen and (min-width: 1008px) {
+    .methodInfoContainer {
+      width: 200px; } }
+
+.methodBlockBody {
+  display: none;
+  position: absolute;
+  right: 0; }
+
+#methodsBlockLabel {
+  border-bottom: 2px solid black;
+  padding: 5px; }
+
+.addButtonIcon {
+  width: 100%;
+  height: 100%;
+  padding: 5px; }
+
+.newtonLabel {
+  margin-top: 5px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black; }
+
+#outputParametersBlock {
+  /*border:2px solid black;*/
+  background-color: white;
+  /*height:150px;*/ }
+
+#outputParametersLabel {
+  padding: 5px;
+  border-bottom: 2px solid black; }
+
+#outputMainMethod {
+  width: 100%; }
+
+#outputParametersContent {
+  padding: 5px; }
+
+#outputPlotIntervalLabel {
+  padding: 5px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black; }
+
+#outputParametersTable {
+  display: table;
+  border-spacing: 5px; }
+
+#progressBar {
+  width: 100%;
+  margin-top: 5px; }
+
+.startButton {
+  margin-top: 3px;
+  margin-bottom: 3px; }
+
+#output {
+  /*border:2px solid black;*/ }
+
+.startButton {
+  margin: 5px 0px; }
+
+#ouputInnerBlock, #ouputInnerPlotBlock {
+  padding: 5px; }
+
+#outputInnerPlotBlock {
+  text-align: center; }
+
+#outputResultsLabel {
+  padding: 5px;
+  border-bottom: 2px solid black; }
+
+#outputGraphLabel {
+  padding: 5px;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black; }
+
+.statCell {
+  display: table-cell;
+  padding: 5px;
+  border: 1px solid black; }
+
+.statRow {
+  display: table-row; }
+
+.statTable {
+  display: table;
+  border-collapse: collapse; }
+
+.statMobileMethod {
+  border-bottom: 2px solid black; }
+
+.statTableMobile {
+  displat: flex;
+  flex-direction: column; }
+
+.statCellMobile {
+  border: 2px solid black; }
+
+.plotDiv {
+  width: 100%; }
+
+.plotComponent {
+  width: 100%; }
+
+#taskBlock {
+  /*width:100%;*/
+  /*border:2px solid black;*/ }
+
+#taskDescriptionLabel {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 5px; }
+
+#taskBlockLabel {
+  border-bottom: 2px solid black;
+  padding: 5px; }
+
+#taskList {
+  overflow-y: auto;
+  position: relative; }
+  @media only screen and (max-width: 640px) {
+    #taskList {
+      height: auto; } }
+  @media only screen and (min-width: 641px) and (max-width: 1007px) {
+    #taskList {
+      height: 200px; } }
+  @media only screen and (min-width: 1008px) {
+    #taskList {
+      height: 200px; } }
+
+.taskListElement {
+  cursor: pointer;
+  padding: 2px 5px;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none; }
+
+#taskDescription {
+  padding: 5px 5px 0px 5px;
+  overflow-y: auto;
+  resize: vertical;
+  background-color: white;
+  position: relative; }
+  @media only screen and (max-width: 640px) {
+    #taskDescription {
+      height: auto; } }
+  @media only screen and (min-width: 641px) and (max-width: 1007px) {
+    #taskDescription {
+      height: 250px; } }
+  @media only screen and (min-width: 1008px) {
+    #taskDescription {
+      height: 250px; } }
+
+#taskParametersBlock {
+  background-color: white;
+  /*border-right:2px solid black;*/
+  /*border-left:2px solid black;*/
+  /*border-bottom:2px solid black;*/
+  /*margin:0px 0.2%;*/ }
+
+#taskParameters, #taskInitials {
+  padding: 5px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  /*! color:white; */ }
+
+.taskParametersTable {
+  display: table;
+  border-spacing: 5px; }
+
+.headerTitle, #header {
+  padding: 2px 5px; }
+
+.noSelect {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none; }
+
+.componentLabel {
+  /*background-color: #edc677;*/
+  /*font-weight:bolder;*/
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none; }
+
+.table_label {
+  display: table-cell;
+  /*text-align:right;*/
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none; }
+
+.table_row_group {
+  display: table-row-group; }
+
+.table_input {
+  display: table-cell;
+  /*margin-left:10px;*/
+  width: 100%; }
+
+input.table_input {
+  width: 100%; }
+
+.table_row {
+  display: table-row; }
+
+.containerMain {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 0px; }
+
+.linkButton {
+  padding: 10px; }
+
+#content {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; }
+  @media only screen and (max-width: 640px) {
+    #content {
+      padding: 0px; } }
+  @media only screen and (min-width: 641px) and (max-width: 1007px) {
+    #content {
+      /*padding:0px 10px;*/ } }
+  @media only screen and (min-width: 1008px) {
+    #content {
+      /*padding:0px 10px;*/ } }
+
+#rootLayout {
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1); }
+
+#rootLayout.normal {
+  transform: translate(0px, 0px); }
+
+#rootLayout.shifted {
+  transform: translate(200px, 0px); }
+
+.link {
+  word-break: normal; }
+
+#menuMobile {
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  position: fixed;
+  height: 100%;
+  width: 200px;
+  z-index: 6;
+  display: flex;
+  flex-direction: row; }
+
+#menuMobile.show {
+  transform: translate(0px, 0px);
+  overflow-x: hidden; }
+
+#menuMobile.hide {
+  transform: translate(-200px, 0px); }
+
+.menuIcon {
+  padding: 20%;
+  width: 100%;
+  height: 100%; }
+
+#menuButton.bg-primary:hover {
+  background-color: #0069d9 !important;
+  fill: white; }
+
+#menuButton.bg-primary {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  fill: white;
+  cursor: pointer; }
+
+.helpIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0px 0px 4px 2px black; }
+
+.helpRoutes.show {
+  display: block; }
+
+.helpRoutes.hide {
+  display: none; }
+
+.switchLanguageIcon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0px 0px 4px 2px black; }
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/
