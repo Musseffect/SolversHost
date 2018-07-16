@@ -88,7 +88,7 @@ class OutputParameters extends React.Component
 		})
 		methods_t.forEach(function(data,index)
 		{
-			methodList.push(<option key={index+"errorMethodList"} value={index}>{"Использовать решение "+(index+1) +'. '+ t(data,lang)}</option>);
+			methodList.push(<option key={index+"errorMethodList"} value={index}>{t({ru:"Использовать решение ",eng:"Use solution "},lang)+(index+1) +'. '+ t(data,lang)}</option>);
 		});
 		let checkboxes=[];
 		let self=this;
