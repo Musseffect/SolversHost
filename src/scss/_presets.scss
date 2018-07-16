@@ -1,0 +1,183 @@
+.presetButtonContainer
+{
+	margin-top:auto;
+	display:flex;
+	flex-direction:column;
+}
+#PresetList
+{
+	overflow-y:auto;
+	white-space: nowrap;
+	margin:5px -5px 0px -5px;
+	display:flex;
+	flex-direction: row;
+}
+
+.presetName
+{
+	word-break: break-all;
+	min-height:1.6rem;
+}
+
+.presetMethod
+{
+	position:relative;
+	display:flex;
+	word-break:break-all;
+}
+
+.presetMethodPreviewParameters
+{
+	display:flex;
+	flex-direction: column;
+}
+
+.presetMethodName
+{
+	/*width:100px;*/
+	display:inline-block;
+}
+
+
+#presetsBlock
+{
+	background-color:#00C13A;
+	display:flex;
+	flex-direction:row;
+}
+
+.presetBlock
+{
+	border:1px solid black;
+	display:flex;
+	flex-direction:column;
+	padding:5px;
+	margin:10px;
+  	@include respond-to(handhelds) { 
+  		min-width:250px;}
+  	@include respond-to(medium-screens) { 
+  		width:250px; }
+  	@include respond-to(wide-screens) { 
+  		width:250px;}
+
+}
+.presetButton
+{
+	margin-top:3px;
+	margin-bottom:3px;
+}
+
+
+.sessionCreationBlock
+{
+	padding:5px;
+	display:flex;
+	flex-direction:column;
+}
+.sessionListControls
+{
+	display:flex;
+	@include respond-to(handhelds) {
+		flex-direction:column;
+		border-bottom:2px solid black;
+	/*align-items:center;*/}
+  	@include respond-to(medium-screens) {
+  	 flex-direction:column; 
+  	 border-right:2px solid black;}
+ 	@include respond-to(wide-screens) {
+ 		flex-direction:column; 
+ 		border-right:2px solid black;}
+}
+
+#sessionBlock
+{
+	/*border:2px solid black;*/
+}
+
+#sessionBlockLabel
+{
+	border-bottom:2px solid black;
+	/*border-left:2px solid black;*/
+	/*border-right:2px solid black;*/
+	padding:5px;
+}
+
+#sessionListBlock
+{
+	background-color:white;
+	display:flex;
+	/*border:2px solid black;*/
+  	@include respond-to(handhelds) { 
+  		flex-direction:column;}
+  	@include respond-to(medium-screens) { 
+  		flex-direction:row; }
+  	@include respond-to(wide-screens) { 
+  		flex-direction:row; }
+
+}
+
+#sessionList
+{
+	display:flex;
+	overflow:auto;
+  	@include respond-to(handhelds) { 
+  		flex-direction:column;
+  		min-height:300px;}
+  	@include respond-to(medium-screens) { 
+  		flex-direction:row; 
+  		flex-wrap:wrap; }
+  	@include respond-to(wide-screens) { 
+  		flex-direction:row; 
+  		flex-wrap:wrap;}
+}
+
+
+
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#modalDialog.show
+{
+	display:block;
+}
+
+#fileField
+{
+	display:none;
+}
+
+.loaderBackground
+{
+	z-index:10;
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	opacity:0.5;
+	background-colro:black;
+	justifyContent:'center';
+	alignItems:'center';
+	flex-direction:'column';
+}
+
+.loaderBackground.show
+{
+	display:flex;
+}
+.loaderBackground.hide
+{
+	display:none;
+}

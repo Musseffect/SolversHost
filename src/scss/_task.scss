@@ -1,0 +1,78 @@
+#taskBlock
+{
+	/*width:100%;*/
+	/*border:2px solid black;*/
+}
+#taskDescriptionLabel
+{
+	border-top:2px solid black;
+	border-bottom:2px solid black;
+	padding:5px;
+}
+#taskBlockLabel
+{
+	border-bottom:2px solid black;
+	padding:5px;
+}
+#taskList
+{
+	overflow-y:auto;
+	position:relative;
+  	@include respond-to(handhelds) {
+	height:auto;}
+  	@include respond-to(medium-screens) { 
+	height:200px;}
+  	@include respond-to(wide-screens) {
+	height:200px; }
+}
+
+
+.taskListElement
+{
+	cursor:pointer;
+	padding:2px 5px;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;
+}
+
+#taskDescription
+{
+	padding:5px 5px 0px 5px;
+	overflow-y:auto; 
+	resize: vertical;
+	background-color: white;
+	position:relative;
+  	@include respond-to(handhelds) {
+	height:auto;}
+  	@include respond-to(medium-screens) { 
+	height:250px;}
+  	@include respond-to(wide-screens) {
+	height:250px; }
+}
+
+
+#taskParametersBlock
+{
+	background-color:white;
+	/*border-right:2px solid black;*/
+	/*border-left:2px solid black;*/
+	/*border-bottom:2px solid black;*/
+	/*margin:0px 0.2%;*/
+}
+
+#taskParameters,#taskInitials
+{
+	padding:5px;
+	border-top:2px solid black;
+	border-bottom:2px solid black;
+	/*! color:white; */
+}
+
+
+.taskParametersTable
+{
+	display:table;
+	border-spacing:5px;
+}

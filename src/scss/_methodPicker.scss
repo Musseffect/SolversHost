@@ -1,0 +1,273 @@
+
+#methodsBlock
+{
+	/*border: 2px solid black;*/
+	background-color:white;
+}
+
+.methodColor0
+{
+	background-color:#E600CE!important;
+}
+.methodColor1
+{
+	background-color:#0014AF!important;
+}
+.methodColor2
+{
+	background-color:#00C13A!important;
+}
+.methodColor3
+{
+	background-color:#F6D444!important;
+}
+
+
+
+#methodAddButton
+{
+	height:52px;
+	border-radius:0px;
+	@include respond-to(handhelds) {
+		width:100%;}
+  	@include respond-to(medium-screens) {
+		width:254px;}
+ 	@include respond-to(wide-screens) {
+		width:254px;}
+}
+#methodAddButton:disabled
+{
+}
+
+
+.methodSelect,.methodInput
+{
+	 width:100%;
+	@include respond-to(handhelds) {
+		display:table-cell;}
+  	@include respond-to(medium-screens) {
+		display:block;}
+ 	@include respond-to(wide-screens) {
+		display:table-cell;}
+	 @media only screen and (max-width: 400px) { 
+	 	display:block;
+	  }
+}
+.methodLabel
+{
+	white-space:nowrap;
+	@include respond-to(handhelds) {
+		display:table-cell;}
+  	@include respond-to(medium-screens) {
+		display:block;}
+ 	@include respond-to(wide-screens) {
+		display:table-cell;}
+	 @media only screen and (max-width: 400px) { 
+	 	display:block;
+	  }
+	margin-bottom:0px;
+	/*margin-top:.5rem;*/
+}
+.methodGroup
+{
+	@include respond-to(handhelds) {
+		display:table-row-group;}
+  	@include respond-to(medium-screens) {
+		display:block;}
+ 	@include respond-to(wide-screens) {
+		display:table-row-group;}
+	 @media only screen and (max-width: 400px) { 
+	 	display:block;
+	  }
+
+}
+.methodRow
+{
+
+
+	@include respond-to(handhelds) {
+		display:table-row;}
+  	@include respond-to(medium-screens) {
+		display:block;}
+ 	@include respond-to(wide-screens) {
+		display:table-row;}
+	 @media only screen and (max-width: 400px) { 
+	 	display:block;
+	  }
+}
+
+#methodParameters.hide
+{
+	visibility:hidden;
+}
+#methodParameters.show
+{
+	visibility:visible;
+}
+
+.methodParametersHidden
+{
+	@include respond-to(handhelds) {
+		display:none;}
+  	@include respond-to(medium-screens) {
+		visibility:hidden;}
+ 	@include respond-to(wide-screens) {
+		visibility:hidden;}
+	 @media only screen and (max-width: 400px) { 
+	 	display:none;
+	  }
+}
+.methodNumber
+{
+	display:inline-block;
+	width:20px;
+	flex-shrink:0;
+}
+.methodName
+{
+	display:inline;
+	/*width:80px;*/
+	overflow-wrap: break-word;
+	word-wrap:break-word;
+}
+.methodColor
+{
+	display:inline-block;
+	background-color:black;
+	flex-shrink:0;
+}
+.methodRemoveButton,.methodColor
+{
+	margin-top:2px;
+	margin-left:2px;
+	margin-right:2px;
+	margin-bottom:2px;
+	width:21px;
+	height:21px;
+}
+.methodRemoveButton
+{
+	display:flex;
+	flex-shrink:0;
+}
+#methodAddingTable
+{
+	@include respond-to(handhelds) {
+		display:table;
+		border-spacing:5px;}
+  	@include respond-to(medium-screens) {
+	 	display:flex;
+	 	padding:5px;
+	 	flex-direction:column;}
+ 	@include respond-to(wide-screens) {
+		display:table;
+		border-spacing:5px;}
+	 @media only screen and (max-width: 400px) { 
+	 	display:flex;
+	 	padding:5px;
+	 	flex-direction:column;}
+}
+.methodRemoveIcon
+{
+	margin:auto;
+	width:60%;
+	height:60%;
+	fill:black;
+}
+.methodRemoveButton:hover .methodRemoveIcon
+{
+	fill:red;
+}
+#methodsListBlock
+{
+	/*! background-color:#AE0A0A; */
+	width:auto;
+	/*min-height:265px;*/
+	display:flex;
+}
+#methodsList
+{
+	background-color:white;
+	@include respond-to(handhelds) {
+		display:flex;
+		flex-direction:column;
+		width:100%;
+		border-bottom:2px solid black;
+	}
+  	@include respond-to(medium-screens) {
+	/*border-right:2px solid black;*/}
+ 	@include respond-to(wide-screens) {
+	/*border-right:2px solid black;*/}
+}
+
+#methodParameters
+{
+	width:auto; 
+	background-color:white;
+	@include respond-to(handhelds) {
+		border-bottom:2px solid black;}
+}
+.methodListItem
+{
+	cursor:pointer;
+	display:flex;
+	min-height:52px;
+	padding:2px;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;  
+	@include respond-to(handhelds) {
+		width:100%;}
+  	@include respond-to(medium-screens) {}
+ 	@include respond-to(wide-screens) {}
+}
+.methodListItem:hover
+{
+	background-color:#ccc;
+	box-shadow:inset 0px 0px 2px 2px #092905;
+}
+.methodListItemSelected,.methodListItemSelected:hover
+{
+	background-color:#007bff;
+	color:white;
+	box-shadow:inset 0px 0px 2px 2px #092905;
+
+}
+.methodInfoContainer
+{
+	display:flex;
+	@include respond-to(handhelds) {
+		flex-grow:1;}
+  	@include respond-to(medium-screens) {
+	width:200px;}
+ 	@include respond-to(wide-screens) {
+	width:200px;}
+}
+
+.methodBlockBody
+{
+	display:none;
+	position:absolute;
+	right:0;
+}
+#methodsBlockLabel
+{
+	border-bottom:2px solid black;
+	padding:5px;
+}
+
+.addButtonIcon
+{
+	width:100%;
+	height:100%;
+	padding:5px;
+}
+
+
+.newtonLabel
+{
+	margin-top:5px;
+	border-bottom:2px solid black;
+	border-right:2px solid black;
+}
