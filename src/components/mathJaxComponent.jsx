@@ -14,6 +14,8 @@ let loaded=false;
 			clearInterval(timeID);
 			loaded=true;
 			MathJax.Hub.Queue([function(){MathJax.Hub.processSectionDelay = 0;}]);
+			MathJax.Hub.Config({
+  				tex2jax: {inlineMath: [ ['$','$']]}});
 		}else if(iter==100)
 		{
 			clearInterval(timeID);
